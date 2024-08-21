@@ -2669,8 +2669,6 @@ with pkgs;
 
   pcem = callPackage ../applications/emulators/pcem { };
 
-  pcsxr = callPackage ../applications/emulators/pcsxr { };
-
   ppsspp-sdl = let
     argset = {
       ffmpeg = ffmpeg_4;
@@ -34732,8 +34730,8 @@ with pkgs;
 
   xenPackages = recurseIntoAttrs (callPackage ../applications/virtualization/xen/packages.nix {});
 
-  xen = xenPackages.xen;
-  xen-slim = xenPackages.xen-slim;
+  xen = xenPackages.xen_4_19;
+  xen-slim = xenPackages.xen_4_19-slim;
 
   xkbset = callPackage ../tools/X11/xkbset { };
 
@@ -37660,8 +37658,6 @@ with pkgs;
   boolector = callPackage ../applications/science/logic/boolector { };
 
   bitwuzla = callPackage ../applications/science/logic/bitwuzla { };
-
-  symbiyosys = callPackage ../applications/science/logic/symbiyosys { };
 
   symfpu = callPackage ../applications/science/logic/symfpu { };
 
